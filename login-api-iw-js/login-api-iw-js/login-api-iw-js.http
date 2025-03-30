@@ -1,0 +1,6 @@
+@login_api_iw_js_HostAddress = http://localhost:5244
+
+GET {{login_api_iw_js_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
