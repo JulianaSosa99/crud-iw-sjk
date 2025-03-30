@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("login-api-iw-js")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71ae33812f62ca620a77ac07b0f22552cc16af93")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c9d552f440e052492aa88b8603aa8d73ee3cc09")]
 [assembly: System.Reflection.AssemblyProductAttribute("login-api-iw-js")]
 [assembly: System.Reflection.AssemblyTitleAttribute("login-api-iw-js")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

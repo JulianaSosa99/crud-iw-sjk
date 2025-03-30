@@ -1,4 +1,5 @@
 using login_api_iw_js.LoginApi_Mappers;
+using login_api_iw_js.LoginApi_Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,11 +17,15 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
-
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("admin"));
+});
 app.UseHttpsRedirection();
 
+app.UseMiddleware<JwtMiddleware>();
+app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();
