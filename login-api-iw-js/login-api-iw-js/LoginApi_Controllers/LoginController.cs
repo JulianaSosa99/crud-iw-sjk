@@ -8,6 +8,8 @@ using System.Text;
 
 namespace login_api_iw_js.LoginApi_Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class LoginController : ControllerBase
     {
         private readonly IUsuarioService _usuarioService;
@@ -23,24 +25,23 @@ namespace login_api_iw_js.LoginApi_Controllers
         public async Task<IActionResult> Login([FromBody] LoginDTO loginDTO)
         {
             // Primero validamos las credenciales
-            var usuario = await _usuarioService.LoginUsuarios(loginDTO.Email, loginDTO.Password);
+            var usuarioDTO = await _usuarioService.LoginUsuarios(loginDTO.Email, loginDTO.Password);
 
-            if (usuario == null)
+            if (usuarioDTO == null)
             {
                 return BadRequest("Credenciales incorrectas");
             }
 
-            // Aquí validamos si el usuario es admin (suponiendo que tienes un campo Role)
-            if (usuario.Email == "Admin" || usuario.PasswordHash == "mB$5Z*4o3")
+            // Si el usuario es admin, se devuelve un token con rol de admin
+            if (usuarioDTO.Email == "admin@gmail.com") // Cambia este valor por el correo de tu admin
             {
-                // Si es admin, generamos el JWT con el rol de "admin"
-                var token = GenerateJwtToken(usuario.Email, "admin", usuario.Id);
+                var token = GenerateJwtToken(usuarioDTO.Email, "admin", usuarioDTO.Id);
                 return Ok(new { Token = token });
             }
 
             // Si no es admin, retornamos un token estándar con su rol
-            var userRole = usuario.Rol; // Asumiendo que tienes un campo Role en el usuario
-            var userToken = GenerateJwtToken(usuario.Email, userRole, usuario.Id);
+            var userRole = usuarioDTO.Rol; // Asumimos que el campo 'Rol' existe
+            var userToken = GenerateJwtToken(usuarioDTO.Email, userRole, usuarioDTO.Id);
 
             return Ok(new { Token = userToken });
         }
@@ -63,10 +64,10 @@ namespace login_api_iw_js.LoginApi_Controllers
         {
             var claims = new[]
             {
-        new Claim(ClaimTypes.Name, email),
-        new Claim(ClaimTypes.Role, role),
-        new Claim("id", userId.ToString())
-    };
+                new Claim(ClaimTypes.Name, email),
+                new Claim(ClaimTypes.Role, role),
+                new Claim("id", userId.ToString())
+            };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

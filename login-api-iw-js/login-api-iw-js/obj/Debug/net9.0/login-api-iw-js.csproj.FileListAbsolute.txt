@@ -83,3 +83,9 @@ C:\Users\USER\Desktop\login-iw-js\login-api-iw-js\login-api-iw-js\obj\Debug\net9
 C:\Users\USER\Desktop\login-iw-js\login-api-iw-js\login-api-iw-js\obj\Debug\net9.0\login-api-iw-js.pdb
 C:\Users\USER\Desktop\login-iw-js\login-api-iw-js\login-api-iw-js\obj\Debug\net9.0\login-api-iw-js.genruntimeconfig.cache
 C:\Users\USER\Desktop\login-iw-js\login-api-iw-js\login-api-iw-js\obj\Debug\net9.0\ref\login-api-iw-js.dll
+C:\Users\USER\Desktop\login-iw-js\login-api-iw-js\login-api-iw-js\bin\Debug\net9.0\libman.json
+C:\Users\USER\Desktop\login-iw-js\login-api-iw-js\login-api-iw-js\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\USER\Desktop\login-iw-js\login-api-iw-js\login-api-iw-js\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\USER\Desktop\login-iw-js\login-api-iw-js\login-api-iw-js\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\USER\Desktop\login-iw-js\login-api-iw-js\login-api-iw-js\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\USER\Desktop\login-iw-js\login-api-iw-js\login-api-iw-js\bin\Debug\net9.0\BCrypt.Net-Next.dll

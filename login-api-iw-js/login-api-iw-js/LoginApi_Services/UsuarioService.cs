@@ -35,7 +35,12 @@ namespace login_api_iw_js.LoginApi_Services
         {
             return null;
         }
-        return _mapper.Map<UsuarioDTO>(usuario);
+            bool esContraseñaCorrecta = PasswordHelper.verifyPassword(password, usuario.PasswordHash);
+            if (!esContraseñaCorrecta)
+            {
+                return null; // Contraseña incorrecta
+            }
+            return _mapper.Map<UsuarioDTO>(usuario);
     }
 
     // Registro de nuevo usuario
@@ -68,6 +73,7 @@ namespace login_api_iw_js.LoginApi_Services
         {
             throw new Exception("El usuario no existe.");
         }
+
 
         var usuario = _mapper.Map<Usuario>(usuarioDTO);
         usuario.Id = id;
