@@ -1,4 +1,4 @@
-using login_api_iw_js.LoginApi_Mappers;
+ï»¿using login_api_iw_js.LoginApi_Mappers;
 using login_api_iw_js.LoginApi_Middleware;
 using login_api_iw_js.LoginApi_Repositories;
 using login_api_iw_js.LoginApi_Services;
@@ -9,75 +9,97 @@ using System.Data;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// ======================
+// ConfiguraciÃ³n de servicios
+// ======================
+
+// AutenticaciÃ³n con JWT
 builder.Services.AddAuthentication(options =>
 {
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme; // Esquema de autenticación predeterminado
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme; // Esquema de desafío
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
 .AddJwtBearer(options =>
 {
-    options.RequireHttpsMetadata = false; // Si estás en desarrollo, puede que quieras deshabilitar HTTPS
+    options.RequireHttpsMetadata = false;
     options.SaveToken = true;
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = false,
         ValidateAudience = false,
         ValidateLifetime = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])) // Clave secreta para la validación
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
     };
 });
-// Primero, configurar los servicios
-builder.Services.AddControllers();
-builder.Services.AddOpenApi();  // Este método ya agrega el servicio para Swagger
+
+// CORS â†’ debe ir antes de builder.Build()
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200") // Cambia si tu frontend estÃ¡ en otro puerto
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
+// Swagger y OpenAPI
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "LoginApi",
+        Version = "v1",
+        Description = "Api para la gestiÃ³n de usuarios y autenticaciÃ³n"
+    });
+});
+
+// AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+// Controladores
+builder.Services.AddControllers();
+
+// Repositorio y servicios
 builder.Services.AddScoped<IDbConnection>(sp =>
     new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 
-builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-
-
-// Configurar la autorización
+// AutorizaciÃ³n
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminOnly", policy => policy.RequireRole("admin"));
 });
-builder.Services.AddSwaggerGen(
-    options =>
-    {
-        options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
-        {
-            Title = "LoginApi",
-            Version = "v1",
-            Description = "Api para la gestion de usuarios y autenticación"
-        });
-    }
-    );
-// Agregar Swagger para la documentación de la API
- 
-// Luego, construir la aplicación
+
+// ======================
+// Construir la app
+// ======================
 var app = builder.Build();
+
+// ======================
+// Middleware
+// ======================
+
 if (app.Environment.IsDevelopment())
 {
-    // Habilitar Swagger y Swagger UI
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Login API v1");
-        c.RoutePrefix = string.Empty;  // Swagger UI estará disponible en la raíz
+        c.RoutePrefix = string.Empty;
     });
 }
 
-
-// Configuración del pipeline de solicitud
+// CORS
+app.UseCors("AllowAngularApp");
 
 app.UseHttpsRedirection();
 
-// Configuración de middleware
-app.UseMiddleware<JwtMiddleware>(); // Middleware JWT para validar el token
-app.UseAuthentication();           // Middleware de autenticación basado en el token
-app.UseAuthorization();            // Middleware para autorizar basado en roles
+app.UseMiddleware<JwtMiddleware>(); // Middleware personalizado
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 

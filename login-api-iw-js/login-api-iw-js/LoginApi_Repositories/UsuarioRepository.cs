@@ -17,6 +17,7 @@ namespace login_api_iw_js.LoginApi_Repositories
         public async Task ActualizarUsuarioAsync(Usuario usuario)
         {
             var parametros = new DynamicParameters();
+            parametros.Add("Id", usuario.Id);
             parametros.Add("Nombre", usuario.Nombre);
             parametros.Add("Email", usuario.Email);
             parametros.Add("PasswordHash", usuario.PasswordHash);

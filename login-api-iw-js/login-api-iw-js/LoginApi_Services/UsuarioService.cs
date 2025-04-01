@@ -78,7 +78,16 @@ namespace login_api_iw_js.LoginApi_Services
         var usuario = _mapper.Map<Usuario>(usuarioDTO);
         usuario.Id = id;
 
-        await _usuarioRepository.ActualizarUsuarioAsync(usuario);
+            if (!string.IsNullOrWhiteSpace(usuario.PasswordHash))
+            {
+                usuario.PasswordHash = PasswordHelper.HashPassword(usuario.PasswordHash);
+            }
+            else
+            {
+                // Mantener la contraseña actual si no se envió una nueva
+                usuario.PasswordHash = usuarioExistente.PasswordHash;
+            }
+            await _usuarioRepository.ActualizarUsuarioAsync(usuario);
     }
 
     // Eliminar usuario
