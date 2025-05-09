@@ -1,0 +1,25 @@
+{
+  "dependencies": {},
+  "parameters": {
+    "login-api-iw-js20250420140331.resourceGroupName": {
+      "Name": "login-api-iw-js20250420140331.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "recurso-ingenieria-web"
+    },
+    "login-api-iw-js20250420140331.subscriptionId": {
+      "Name": "login-api-iw-js20250420140331.subscriptionId",
+      "Type": "subscription",
+      "Value": "2557fa9c-67fb-4e52-9e0b-15a58389d7a6"
+    },
+    "login-api-iw-js20250420140331.resourceGroupLocation": {
+      "Name": "login-api-iw-js20250420140331.resourceGroupLocation",
+      "Type": null,
+      "Value": "westus3"
+    },
+    "login-api-iw-js20250420140331.resourceName": {
+      "Name": "login-api-iw-js20250420140331.resourceName",
+      "Type": null,
+      "Value": "login-api-iw-js20250420140331"
+    }
+  }
+}
