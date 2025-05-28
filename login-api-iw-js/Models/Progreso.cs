@@ -1,14 +1,27 @@
-﻿namespace login_api_iw_js.Models
+﻿using login_api_iw_js.Models;
+using System.ComponentModel.DataAnnotations;
+
+public class Progreso
 {
-    public class Progreso
-    {
-        public int Id { get; set; }
+    public int Id { get; set; }
 
-        public int UsuarioId { get; set; } // Viene del token o login
-        public int HitoId { get; set; }
-        public Hito Hito { get; set; }
+    [Required]
+    public int UsuarioId { get; set; }
 
-        public string Escala { get; set; } // 'Excelente', 'Bueno', 'Regular', 'Bajo', 'Sin avanzar'
-    }
+    [Required]
+    public int ObjetivoId { get; set; }
+
+
+    [Required]
+    public int HitoId { get; set; }
+
+
+    [Required]
+    [StringLength(20)]
+    public string Escala { get; set; }
+
+    public Hito Hito { get; set; }
+    public UsuarioObjetivo UsuarioObjetivo { get; set; }
 
 }
+
