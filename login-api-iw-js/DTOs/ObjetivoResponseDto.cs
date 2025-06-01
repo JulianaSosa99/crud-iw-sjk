@@ -6,5 +6,4 @@
         public string Nombre { get; set; }
         public DateTime FechaAsignacion { get; set; }
     }
-
 }

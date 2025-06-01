@@ -193,7 +193,6 @@ namespace login_api_iw_js.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Descripcion")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("HitoId")
@@ -205,7 +204,6 @@ namespace login_api_iw_js.Migrations
                         .HasColumnType("nvarchar(120)");
 
                     b.Property<string>("RecursoUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

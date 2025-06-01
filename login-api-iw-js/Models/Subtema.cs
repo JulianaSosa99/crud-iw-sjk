@@ -8,9 +8,9 @@ namespace login_api_iw_js.Models
         [Required]
         [StringLength(120)]
         public  string Nombre { get; set; } 
-        public string Descripcion { get; set; }
+        public string? Descripcion { get; set; }
         [Url]
-        public string RecursoUrl { get; set; }
+        public string? RecursoUrl { get; set; }
         [Required]
         public int HitoId { get; set; } 
         public Hito Hito { get; set; }

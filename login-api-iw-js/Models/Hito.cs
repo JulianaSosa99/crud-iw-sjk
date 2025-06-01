@@ -17,7 +17,7 @@ namespace login_api_iw_js.Models
         public Tema Tema { get; set; }
         [Required]
         [Range(1, int.MaxValue)]
-        public int Calificacion { get; set; } // número total de bolitas (máximo)
+        public int? Calificacion { get; set; } // número total de bolitas (máximo)
 
         public ICollection<Progreso> Progresos { get; set; }
         public ICollection<Subtema> Subtemas { get; set; }
