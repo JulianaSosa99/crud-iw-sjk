@@ -59,10 +59,7 @@ namespace login_api_iw_js.Migrations
                     b.Property<int>("UsuarioId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UsuarioObjetivoObjetivoId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("UsuarioObjetivoUsuarioId")
+                    b.Property<int>("ValorObtenido")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -70,8 +67,6 @@ namespace login_api_iw_js.Migrations
                     b.HasIndex("HitoId");
 
                     b.HasIndex("UsuarioId", "ObjetivoId");
-
-                    b.HasIndex("UsuarioObjetivoUsuarioId", "UsuarioObjetivoObjetivoId");
 
                     b.ToTable("Progreso");
                 });
@@ -148,6 +143,9 @@ namespace login_api_iw_js.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Calificacion")
+                        .HasColumnType("int");
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
@@ -241,14 +239,10 @@ namespace login_api_iw_js.Migrations
                         .IsRequired();
 
                     b.HasOne("UsuarioObjetivo", "UsuarioObjetivo")
-                        .WithMany()
+                        .WithMany("Progresos")
                         .HasForeignKey("UsuarioId", "ObjetivoId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.HasOne("UsuarioObjetivo", null)
-                        .WithMany("Progresos")
-                        .HasForeignKey("UsuarioObjetivoUsuarioId", "UsuarioObjetivoObjetivoId");
 
                     b.Navigation("Hito");
 
@@ -257,17 +251,21 @@ namespace login_api_iw_js.Migrations
 
             modelBuilder.Entity("UsuarioObjetivo", b =>
                 {
-                    b.HasOne("login_api_iw_js.Models.Objetivo", null)
+                    b.HasOne("login_api_iw_js.Models.Objetivo", "Objetivo")
                         .WithMany("UsuarioObjetivos")
                         .HasForeignKey("ObjetivoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("login_api_iw_js.LoginApi_Models.Usuario", null)
+                    b.HasOne("login_api_iw_js.LoginApi_Models.Usuario", "Usuario")
                         .WithMany("UsuarioObjetivos")
                         .HasForeignKey("UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Objetivo");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("login_api_iw_js.Models.Hito", b =>

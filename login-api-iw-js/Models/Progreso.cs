@@ -11,10 +11,8 @@ public class Progreso
     [Required]
     public int ObjetivoId { get; set; }
 
-
     [Required]
     public int HitoId { get; set; }
-
 
     [Required]
     [StringLength(20)]
@@ -22,6 +20,8 @@ public class Progreso
 
     public Hito Hito { get; set; }
     public UsuarioObjetivo UsuarioObjetivo { get; set; }
+    [Required]
+    [Range(0, int.MaxValue)]
+    public int ValorObtenido { get; set; } // número de bolitas llenadas por el usuario
 
 }
-

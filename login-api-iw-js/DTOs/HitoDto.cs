@@ -1,8 +1,9 @@
 ﻿namespace login_api_iw_js.DTOs
 {
-    public class TemaCreateDto
+    public class HitoDto
     {
         public string Nombre { get; set; }
-        public List<string> Subtemas { get; set; }
+        public DateTime FechaLimite { get; set; }
     }
+
 }

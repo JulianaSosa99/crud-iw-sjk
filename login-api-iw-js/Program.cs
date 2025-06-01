@@ -4,7 +4,9 @@ using login_api_iw_js.LoginApi_Middleware;
 using login_api_iw_js.LoginApi_Repositories;
 using login_api_iw_js.LoginApi_Services;
 using login_api_iw_js.Services.Implementations;
+using login_api_iw_js.Services.Implementations.Administrador;
 using login_api_iw_js.Services.Interfaces;
+using login_api_iw_js.Services.Interfaces.Administrador;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -90,6 +92,8 @@ builder.Services.AddScoped<IDbConnection>(sp =>
 */
 
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddScoped<IAsigancionService, AsignacionService>();
+
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<ITemaService, TemaService>();
 //builder.Services.AddScoped<IObjetivoService, ObjetivoService>();

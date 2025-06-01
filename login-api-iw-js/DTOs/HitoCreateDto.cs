@@ -2,7 +2,9 @@
 {
     public class HitoCreateDto
     {
-        public string Nombre { get; set; }
-        public int ObjetivoID { get; set; }
+        public string Descripcion { get; set; }
+        public int Calificacion { get; set; }
+        public List<string>? Subtemas { get; set; }
     }
+
 }

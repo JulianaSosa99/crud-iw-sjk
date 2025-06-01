@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace login_api_iw_js.Migrations
 {
     /// <inheritdoc />
-    public partial class PrimerFixRefactor : Migration
+    public partial class RefactorFinalLimpio : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -160,9 +160,7 @@ namespace login_api_iw_js.Migrations
                     UsuarioId = table.Column<int>(type: "int", nullable: false),
                     ObjetivoId = table.Column<int>(type: "int", nullable: false),
                     HitoId = table.Column<int>(type: "int", nullable: false),
-                    Escala = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    UsuarioObjetivoObjetivoId = table.Column<int>(type: "int", nullable: true),
-                    UsuarioObjetivoUsuarioId = table.Column<int>(type: "int", nullable: true)
+                    Escala = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -179,11 +177,6 @@ namespace login_api_iw_js.Migrations
                         principalTable: "UsuarioObjetivo",
                         principalColumns: new[] { "UsuarioId", "ObjetivoId" },
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Progreso_UsuarioObjetivo_UsuarioObjetivoUsuarioId_UsuarioObjetivoObjetivoId",
-                        columns: x => new { x.UsuarioObjetivoUsuarioId, x.UsuarioObjetivoObjetivoId },
-                        principalTable: "UsuarioObjetivo",
-                        principalColumns: new[] { "UsuarioId", "ObjetivoId" });
                 });
 
             migrationBuilder.CreateIndex(
@@ -205,11 +198,6 @@ namespace login_api_iw_js.Migrations
                 name: "IX_Progreso_UsuarioId_ObjetivoId",
                 table: "Progreso",
                 columns: new[] { "UsuarioId", "ObjetivoId" });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Progreso_UsuarioObjetivoUsuarioId_UsuarioObjetivoObjetivoId",
-                table: "Progreso",
-                columns: new[] { "UsuarioObjetivoUsuarioId", "UsuarioObjetivoObjetivoId" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Subtema_HitoId",

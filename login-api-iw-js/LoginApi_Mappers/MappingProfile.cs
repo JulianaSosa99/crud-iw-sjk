@@ -17,8 +17,7 @@ namespace login_api_iw_js.LoginApi_Mappers
             CreateMap<Objetivo, ObjetivoResponseDto>();
             CreateMap<ObjetivoCreateDto, Objetivo>();
             CreateMap<Hito, HitoResponseDto>();
-            CreateMap<HitoCreateDto, Hito>();
-            CreateMap<HitoMarcarCumplidoDto, Hito>();
-        }
+            CreateMap<HitoDto, Hito>();
+                   }
     }
 }
