@@ -43,7 +43,7 @@ namespace login_api_iw_js.Services.Implementations.Administrador
             _context.Objetivo.Add(objetivo);
             await _context.SaveChangesAsync();
 
-            // Asignar al usuario si es necesario
+            // Asignar al usuario que lo crea (si aplica)
             _context.UsuarioObjetivo.Add(new UsuarioObjetivo
             {
                 UsuarioId = usuarioId,
@@ -51,6 +51,9 @@ namespace login_api_iw_js.Services.Implementations.Administrador
                 FechaAsignacion = DateTime.UtcNow
             });
             await _context.SaveChangesAsync();
+
+           
+            await AsignarNuevoObjetivoATodosLosUsuariosDelTema(dto.TemaId, objetivo.Id);
 
             return objetivo.Id;
         }
@@ -72,6 +75,32 @@ namespace login_api_iw_js.Services.Implementations.Administrador
             if (objetivo == null) return;
 
             _context.Objetivo.Remove(objetivo);
+            await _context.SaveChangesAsync();
+        }
+        public async Task AsignarNuevoObjetivoATodosLosUsuariosDelTema(int temaId, int nuevoObjetivoId)
+        {
+            var usuariosConTema = await _context.UsuarioObjetivo
+     .Where(uo => uo.Objetivo.Temas.Any(t => t.Id == temaId))
+     .Select(uo => uo.UsuarioId)
+     .Distinct()
+     .ToListAsync();
+
+            foreach (var usuarioId in usuariosConTema)
+            {
+                var yaAsignado = await _context.UsuarioObjetivo
+                    .AnyAsync(uo => uo.UsuarioId == usuarioId && uo.ObjetivoId == nuevoObjetivoId);
+
+                if (!yaAsignado)
+                {
+                    _context.UsuarioObjetivo.Add(new UsuarioObjetivo
+                    {
+                        UsuarioId = usuarioId,
+                        ObjetivoId = nuevoObjetivoId,
+                        FechaAsignacion = DateTime.UtcNow
+                    });
+                }
+            }
+
             await _context.SaveChangesAsync();
         }
     }

@@ -7,6 +7,7 @@ public class UsuarioObjetivo
     public Usuario Usuario { get; set; }
 
     public int ObjetivoId { get; set; }
+
     public Objetivo Objetivo { get; set; }
 
     public DateTime FechaAsignacion { get; set; }
