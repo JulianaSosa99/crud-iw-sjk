@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace login_api_iw_js.Migrations
 {
     /// <inheritdoc />
-    public partial class RefactorFinalLimpio : Migration
+    public partial class RefactorConDbDeployada : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -61,7 +61,8 @@ namespace login_api_iw_js.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ObjetivoId = table.Column<int>(type: "int", nullable: false),
-                    TemaId = table.Column<int>(type: "int", nullable: false)
+                    TemaId = table.Column<int>(type: "int", nullable: false),
+                    Calificacion = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -136,8 +137,8 @@ namespace login_api_iw_js.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(120)", maxLength: 120, nullable: false),
-                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RecursoUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RecursoUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     HitoId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -160,7 +161,8 @@ namespace login_api_iw_js.Migrations
                     UsuarioId = table.Column<int>(type: "int", nullable: false),
                     ObjetivoId = table.Column<int>(type: "int", nullable: false),
                     HitoId = table.Column<int>(type: "int", nullable: false),
-                    Escala = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false)
+                    Escala = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    ValorObtenido = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

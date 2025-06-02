@@ -37,9 +37,8 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = false,
         ValidateLifetime = true,
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
-        RoleClaimType = ClaimTypes.Role 
+        RoleClaimType = ClaimTypes.Role
     };
-
 });
 
 // CORS
@@ -67,21 +66,28 @@ builder.Services.AddSwaggerGen(options =>
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
+// Obtener la cadena desde variable de entorno
+var connectionString = Environment.GetEnvironmentVariable("DefaultConnection");
+
+if (string.IsNullOrEmpty(connectionString))
+    throw new InvalidOperationException("La variable de entorno 'DefaultConnection' no está configurada.");
+
 // DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(connectionString));
+
+// Conexión manual a DB para procedimientos (si se usa)
+builder.Services.AddScoped<IDbConnection>(sp =>
+    new SqlConnection(connectionString));
 
 // Controladores
 builder.Services.AddControllers();
 
-// Conexión manual a DB para procedimientos (si se usa)
-builder.Services.AddScoped<IDbConnection>(sp =>
-    new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
-
 // Repositorios y Servicios
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
-//Servicios y repositorios de usuario
+
+// Servicios y repositorios de usuario
 builder.Services.AddScoped<IProgresoService, ProgresoService>();
 builder.Services.AddScoped<IObjetivoUsuarioService, ObjetivoUsuarioService>();
 builder.Services.AddScoped<IRecomendacionService, RecomendacionService>();
