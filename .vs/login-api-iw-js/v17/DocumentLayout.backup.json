@@ -3,48 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\services\\implementations\\temaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\services\\implementations\\temaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\services\\interfaces\\itemaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\services\\interfaces\\itemaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\login-api-iw-js.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\login-api-iw-js.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\loginapi_middleware\\jwtmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\loginapi_middleware\\jwtmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\loginapi_models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\loginapi_models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\services\\implementations\\hitoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\services\\implementations\\hitoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\services\\interfaces\\ihitoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\services\\interfaces\\ihitoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\models\\objetivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\models\\objetivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\services\\implementations\\objetivoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\services\\implementations\\objetivoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\controllers\\temacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\controllers\\temacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\services\\implementations\\temaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\services\\implementations\\temaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\controllers\\objetivocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\controllers\\objetivocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\services\\implementations\\hitoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\services\\implementations\\hitoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\services\\interfaces\\iobjetivoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\services\\interfaces\\iobjetivoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\controllers\\admin\\hitocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\controllers\\admin\\hitocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\migrations\\20250525232900_primeramigracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\migrations\\20250525232900_primeramigracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|c:\\users\\user\\desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9B433112-BB45-4759-AA0E-51F140E86E75}|login-api-iw-js\\login-api-iw-js.csproj|solutionrelative:login-api-iw-js\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Migrations\\20250525232347_PRIMERAMIGRACION.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:login-api-iw-js\\Migrations\\20250525232347_PRIMERAMIGRACION.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 325,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,93 +66,28 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Program.cs",
-              "RelativeDocumentMoniker": "login-api-iw-js\\Program.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Program.cs",
-              "RelativeToolTip": "login-api-iw-js\\Program.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T06:16:15.916Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "login-api-iw-js.http",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\login-api-iw-js.http",
-              "RelativeDocumentMoniker": "login-api-iw-js\\login-api-iw-js.http",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\login-api-iw-js.http",
-              "RelativeToolTip": "login-api-iw-js\\login-api-iw-js.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-05-09T06:16:12.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "JwtMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\LoginApi_Middleware\\JwtMiddleware.cs",
-              "RelativeDocumentMoniker": "login-api-iw-js\\LoginApi_Middleware\\JwtMiddleware.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\LoginApi_Middleware\\JwtMiddleware.cs",
-              "RelativeToolTip": "login-api-iw-js\\LoginApi_Middleware\\JwtMiddleware.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T06:16:04.484Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\LoginApi_Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "login-api-iw-js\\LoginApi_Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\LoginApi_Models\\Usuario.cs",
-              "RelativeToolTip": "login-api-iw-js\\LoginApi_Models\\Usuario.cs",
+              "DocumentIndex": 0,
+              "Title": "Objetivo.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Models\\Objetivo.cs",
+              "RelativeDocumentMoniker": "login-api-iw-js\\Models\\Objetivo.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Models\\Objetivo.cs",
+              "RelativeToolTip": "login-api-iw-js\\Models\\Objetivo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T06:15:51.289Z",
+              "WhenOpened": "2025-05-27T00:15:50.074Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IHitoService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Services\\Interfaces\\IHitoService.cs",
-              "RelativeDocumentMoniker": "login-api-iw-js\\Services\\Interfaces\\IHitoService.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Services\\Interfaces\\IHitoService.cs",
-              "RelativeToolTip": "login-api-iw-js\\Services\\Interfaces\\IHitoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T06:14:44.023Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HitoService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Services\\Implementations\\HitoService.cs",
-              "RelativeDocumentMoniker": "login-api-iw-js\\Services\\Implementations\\HitoService.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Services\\Implementations\\HitoService.cs",
-              "RelativeToolTip": "login-api-iw-js\\Services\\Implementations\\HitoService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwBcAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T06:14:41.612Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "ObjetivoService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Services\\Implementations\\ObjetivoService.cs",
               "RelativeDocumentMoniker": "login-api-iw-js\\Services\\Implementations\\ObjetivoService.cs",
@@ -156,58 +95,137 @@
               "RelativeToolTip": "login-api-iw-js\\Services\\Implementations\\ObjetivoService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T06:14:38.465Z",
+              "WhenOpened": "2025-05-27T00:12:30.467Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TemaController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Controllers\\TemaController.cs",
-              "RelativeDocumentMoniker": "login-api-iw-js\\Controllers\\TemaController.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Controllers\\TemaController.cs",
-              "RelativeToolTip": "login-api-iw-js\\Controllers\\TemaController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwBsAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T07:49:05.483Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ObjetivoController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Controllers\\ObjetivoController.cs",
-              "RelativeDocumentMoniker": "login-api-iw-js\\Controllers\\ObjetivoController.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Controllers\\ObjetivoController.cs",
-              "RelativeToolTip": "login-api-iw-js\\Controllers\\ObjetivoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T07:49:04.414Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ITemaService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Services\\Interfaces\\ITemaService.cs",
-              "RelativeDocumentMoniker": "login-api-iw-js\\Services\\Interfaces\\ITemaService.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Services\\Interfaces\\ITemaService.cs",
-              "RelativeToolTip": "login-api-iw-js\\Services\\Interfaces\\ITemaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T07:48:09.772Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "TemaService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Services\\Implementations\\TemaService.cs",
               "RelativeDocumentMoniker": "login-api-iw-js\\Services\\Implementations\\TemaService.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Services\\Implementations\\TemaService.cs",
               "RelativeToolTip": "login-api-iw-js\\Services\\Implementations\\TemaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHwAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T07:47:59.045Z",
+              "WhenOpened": "2025-05-27T00:12:26.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HitoService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Services\\Implementations\\HitoService.cs",
+              "RelativeDocumentMoniker": "login-api-iw-js\\Services\\Implementations\\HitoService.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Services\\Implementations\\HitoService.cs",
+              "RelativeToolTip": "login-api-iw-js\\Services\\Implementations\\HitoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T00:12:24.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IObjetivoService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Services\\Interfaces\\IObjetivoService.cs",
+              "RelativeDocumentMoniker": "login-api-iw-js\\Services\\Interfaces\\IObjetivoService.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Services\\Interfaces\\IObjetivoService.cs",
+              "RelativeToolTip": "login-api-iw-js\\Services\\Interfaces\\IObjetivoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T00:12:21.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "libman.json",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\libman.json",
+              "RelativeDocumentMoniker": "login-api-iw-js\\libman.json",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\libman.json",
+              "RelativeToolTip": "login-api-iw-js\\libman.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-27T00:10:54.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "login-api-iw-js\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\appsettings.Development.json",
+              "RelativeToolTip": "login-api-iw-js\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-27T00:10:53.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HitoController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Controllers\\Admin\\HitoController.cs",
+              "RelativeDocumentMoniker": "login-api-iw-js\\Controllers\\Admin\\HitoController.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Controllers\\Admin\\HitoController.cs",
+              "RelativeToolTip": "login-api-iw-js\\Controllers\\Admin\\HitoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T00:10:31.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20250525232900_PRIMERAMIGRACION.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Migrations\\20250525232900_PRIMERAMIGRACION.cs",
+              "RelativeDocumentMoniker": "login-api-iw-js\\Migrations\\20250525232900_PRIMERAMIGRACION.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Migrations\\20250525232900_PRIMERAMIGRACION.cs",
+              "RelativeToolTip": "login-api-iw-js\\Migrations\\20250525232900_PRIMERAMIGRACION.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAgwFoAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T23:29:01.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\appsettings.json",
+              "RelativeDocumentMoniker": "login-api-iw-js\\appsettings.json",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\appsettings.json",
+              "RelativeToolTip": "login-api-iw-js\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-25T23:25:23.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20250525232347_PRIMERAMIGRACION.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Migrations\\20250525232347_PRIMERAMIGRACION.cs",
+              "RelativeDocumentMoniker": "login-api-iw-js\\Migrations\\20250525232347_PRIMERAMIGRACION.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Migrations\\20250525232347_PRIMERAMIGRACION.cs",
+              "RelativeToolTip": "login-api-iw-js\\Migrations\\20250525232347_PRIMERAMIGRACION.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T23:23:47.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Program.cs",
+              "RelativeDocumentMoniker": "login-api-iw-js\\Program.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\login-iw-js\\login-api-iw-js\\login-api-iw-js\\Program.cs",
+              "RelativeToolTip": "login-api-iw-js\\Program.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAQwI4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T23:23:18.605Z",
               "EditorCaption": ""
             }
           ]

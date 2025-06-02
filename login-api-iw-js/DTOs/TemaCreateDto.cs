@@ -3,6 +3,9 @@
     public class TemaCreateDto
     {
         public string Nombre { get; set; }
-        public string Descripcion { get; set; }
+    
     }
+
+    
+
 }

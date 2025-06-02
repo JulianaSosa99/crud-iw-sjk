@@ -2,10 +2,8 @@
 {
     public class ObjetivoResponseDto
     {
-        public int ObjetivoID { get; set; }
-        public string Titulo { get; set; }
-        public string Descripcion { get; set; }
-        public int TemaID { get; set; }
-        public int? NivelEvaluacion { get; set; }
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public DateTime FechaAsignacion { get; set; }
     }
 }
