@@ -68,7 +68,7 @@ namespace login_api_iw_js.Migrations
 
                     b.HasIndex("UsuarioId", "ObjetivoId");
 
-                    b.ToTable("Progreso");
+                    b.ToTable("Progreso", (string)null);
                 });
 
             modelBuilder.Entity("Tema", b =>
@@ -86,7 +86,7 @@ namespace login_api_iw_js.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tema");
+                    b.ToTable("Tema", (string)null);
                 });
 
             modelBuilder.Entity("UsuarioObjetivo", b =>
@@ -104,7 +104,7 @@ namespace login_api_iw_js.Migrations
 
                     b.HasIndex("ObjetivoId");
 
-                    b.ToTable("UsuarioObjetivo");
+                    b.ToTable("UsuarioObjetivo", (string)null);
                 });
 
             modelBuilder.Entity("login_api_iw_js.LoginApi_Models.Usuario", b =>
@@ -133,7 +133,7 @@ namespace login_api_iw_js.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Usuario");
+                    b.ToTable("Usuario", (string)null);
                 });
 
             modelBuilder.Entity("login_api_iw_js.Models.Hito", b =>
@@ -163,7 +163,7 @@ namespace login_api_iw_js.Migrations
 
                     b.HasIndex("TemaId");
 
-                    b.ToTable("Hito");
+                    b.ToTable("Hito", (string)null);
                 });
 
             modelBuilder.Entity("login_api_iw_js.Models.Objetivo", b =>
@@ -181,7 +181,7 @@ namespace login_api_iw_js.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Objetivo");
+                    b.ToTable("Objetivo", (string)null);
                 });
 
             modelBuilder.Entity("login_api_iw_js.Models.Subtema", b =>
@@ -210,7 +210,7 @@ namespace login_api_iw_js.Migrations
 
                     b.HasIndex("HitoId");
 
-                    b.ToTable("Subtema");
+                    b.ToTable("Subtema", (string)null);
                 });
 
             modelBuilder.Entity("ObjetivoTema", b =>
