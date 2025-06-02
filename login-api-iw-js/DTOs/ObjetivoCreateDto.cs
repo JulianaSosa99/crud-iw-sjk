@@ -4,5 +4,5 @@ public class ObjetivoCreateDto
 {
     public string NombreObjetivo { get; set; }
     public int TemaId { get; set; }
-    public List<HitoCreateDto> Hitos { get; set; }
+    public List<HitoCreateDto>? Hitos { get; set; }
 }
