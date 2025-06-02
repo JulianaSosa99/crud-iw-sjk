@@ -31,10 +31,10 @@ namespace login_api_iw_js.Controllers.Administrador
         public async Task<IActionResult> Crear([FromBody] ObjetivoCreateDto dto)
         {
             int usuarioId = int.Parse(User.FindFirst("id")?.Value ?? "0");
-            await _objetivoService.CrearObjetivoConHitosAsync(dto, usuarioId);
-            return Ok(new { mensaje = "Objetivo creado correctamente" });
+            // Cambia el método de servicio para solo crear el objetivo
+            var objetivoId = await _objetivoService.CrearObjetivoAsync(dto, usuarioId);
+            return Ok(new { mensaje = "Objetivo creado correctamente", objetivoId });
         }
-
         // PUT: api/objetivo/5
         [HttpPut("{id}")]
         public async Task<IActionResult> Actualizar(int id, [FromBody] ObjetivoUpdateDto dto)
