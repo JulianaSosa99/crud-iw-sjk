@@ -8,5 +8,8 @@ namespace login_api_iw_js.Services.Interfaces.Administrador
         Task<int> CrearObjetivoAsync(ObjetivoCreateDto dto, int usuarioId); // Cambiado: retorna el id
         Task ActualizarObjetivoAsync(int objetivoId, ObjetivoUpdateDto dto);
         Task EliminarObjetivoAsync(int objetivoId);
+        Task AsignarNuevoObjetivoATodosLosUsuariosDelTema(int temaId, int nuevoObjetivoId);
+
+
     }
 }
