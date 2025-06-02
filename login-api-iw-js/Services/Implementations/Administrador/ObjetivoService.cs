@@ -33,45 +33,27 @@ namespace login_api_iw_js.Services.Implementations.Administrador
             return objetivos;
         }
 
-        public async Task CrearObjetivoConHitosAsync(ObjetivoCreateDto dto, int usuarioId)
+        public async Task<int> CrearObjetivoAsync(ObjetivoCreateDto dto, int usuarioId)
         {
             var objetivo = new Objetivo
             {
                 Nombre = dto.NombreObjetivo,
-                Hitos = dto.Hitos.Select(h => new Hito
-                {
-                    Descripcion = h.Descripcion,
-                    Calificacion = h.Calificacion,
-                    TemaId = h.TemaId,
-                    Subtemas = h.Subtemas?.Select(s => new Subtema
-                    {
-                        Nombre = s.Nombre,
-                        Descripcion = s.Descripcion,
-                        RecursoUrl = s.RecursoUrl
-                    }).ToList()
-                }).ToList()
+                Temas = new List<Tema> { await _context.Tema.FindAsync(dto.TemaId) }
             };
-
-            var tema = await _context.Tema.FindAsync(dto.TemaId);
-            if (tema != null)
-            {
-                objetivo.Temas = new List<Tema> { tema };
-            }
-
-            await _context.Objetivo.AddAsync(objetivo);
+            _context.Objetivo.Add(objetivo);
             await _context.SaveChangesAsync();
 
-            var relacion = new UsuarioObjetivo
+            // Asignar al usuario si es necesario
+            _context.UsuarioObjetivo.Add(new UsuarioObjetivo
             {
                 UsuarioId = usuarioId,
                 ObjetivoId = objetivo.Id,
                 FechaAsignacion = DateTime.UtcNow
-            };
-
-            await _context.UsuarioObjetivo.AddAsync(relacion);
+            });
             await _context.SaveChangesAsync();
-        }
 
+            return objetivo.Id;
+        }
         public async Task ActualizarObjetivoAsync(int objetivoId, ObjetivoUpdateDto dto)
         {
             var objetivo = await _context.Objetivo.FindAsync(objetivoId);
