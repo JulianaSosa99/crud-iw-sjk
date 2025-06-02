@@ -8,8 +8,8 @@ namespace login_api_iw_js.Models
         [Required]
         [StringLength(150)]
         public string Nombre { get; set; }
-        public ICollection<Hito> Hitos { get; set; } 
-        public ICollection<Tema> Temas { get; set; }
+        public ICollection<Hito>? Hitos { get; set; } 
+        public ICollection<Tema>? Temas { get; set; }
         public ICollection<UsuarioObjetivo> UsuarioObjetivos { get; set; }
 
     }
