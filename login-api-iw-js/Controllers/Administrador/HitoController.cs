@@ -1,4 +1,6 @@
 ﻿using login_api_iw_js.DTOs;
+using login_api_iw_js.Services.Implementations.Administrador;
+using login_api_iw_js.Services.Implementations.Usuario;
 using login_api_iw_js.Services.Interfaces.Administrador;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +13,13 @@ namespace login_api_iw_js.Controllers.Administrador
     public class HitoController : ControllerBase
     {
         private readonly IHitoService _hitoService;
+        private readonly ReporteHitoMayorMenorPuntaje _reporte1;
 
-        public HitoController(IHitoService hitoService)
+        public HitoController(IHitoService hitoService, ReporteHitoMayorMenorPuntaje reporte1)
         {
             _hitoService = hitoService;
-        }
+            _reporte1 = reporte1;
+            }
 
         // GET: api/hito
         [HttpGet]
@@ -61,5 +65,19 @@ namespace login_api_iw_js.Controllers.Administrador
             await _hitoService.EliminarAsync(id);
             return Ok(new { mensaje = "Hito eliminado correctamente" });
         }
+
+        [HttpGet("reporte")]
+        public async Task<ActionResult<List<string>>> ListadoRanking()
+        {
+            var resultado = await _reporte1.ReporteMayorMenor();
+            var resultado2 = await _reporte1.ReporteMenorUsuario();
+            return Ok(new
+            {
+                RankingMayorMenor = resultado,
+                UsuarioMenorPuntaje = resultado2
+            });
+        }
+        
+
     }
 }

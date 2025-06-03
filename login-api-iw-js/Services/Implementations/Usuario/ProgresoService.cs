@@ -62,5 +62,17 @@ namespace login_api_iw_js.Services.Implementations.Usuario
                     ValorObtenido = p.ValorObtenido
                 }).ToListAsync();
         }
+        public async Task<List<ProgresoDto>> ObtenerTodosProgresosAsync()
+        {
+            return await _context.Progreso
+                .Select(p => new ProgresoDto
+                {
+                    ObjetivoId = p.ObjetivoId,
+                    HitoId = p.HitoId,
+                    Escala = p.Escala,
+                    ValorObtenido = p.ValorObtenido
+                }).ToListAsync();
+        }
+
     }
 }

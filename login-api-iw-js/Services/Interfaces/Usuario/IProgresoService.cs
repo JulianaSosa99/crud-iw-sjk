@@ -6,5 +6,6 @@ namespace login_api_iw_js.Services.Interfaces.Usuario
     {
         Task RegistrarProgresoAsync(int usuarioId, ProgresoDto dto);
         Task<List<ProgresoDto>> ObtenerProgresosPorUsuario(int usuarioId);
+        Task<List<ProgresoDto>> ObtenerTodosProgresosAsync();
     }
 }

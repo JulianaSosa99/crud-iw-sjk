@@ -16,6 +16,6 @@ namespace login_api_iw_js.DTOs
         public int TemaId { get; set; }
 
         [Range(1, 10, ErrorMessage = "La calificación debe estar entre 1 y 10")]
-        public int? Calificacion { get; set; } // Puede empezar como null
+        public int? Calificacion { get; set; }  
     }
 }

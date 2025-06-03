@@ -86,6 +86,10 @@ builder.Services.AddControllers();
 // Repositorios y Servicios
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<ReporteHitoMayorMenorPuntaje>();
+builder.Services.AddScoped<HitoService>();
+
+
 
 // Servicios y repositorios de usuario
 builder.Services.AddScoped<IProgresoService, ProgresoService>();
