@@ -5,7 +5,9 @@
 ---
 
 Este es el backend de un sistema académico desarrollado en **.NET 9**. Permite gestionar objetivos, hitos y temas académicos, asignarlos a usuarios y registrar su progreso. También genera recomendaciones personalizadas basadas en el desempeño del usuario.
-
+---
+DELPLOY: https://crud-iw-js-front.onrender.com/
+---
 ## 🚀 Tecnologías usadas
 
 - ASP.NET Core 9
