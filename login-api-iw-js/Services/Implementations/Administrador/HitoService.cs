@@ -3,6 +3,9 @@ using login_api_iw_js.Data;
 using login_api_iw_js.DTOs;
 using login_api_iw_js.Models;
 using login_api_iw_js.Services.Interfaces.Administrador;
+using login_api_iw_js.Validators;
+using login_api_iw_js.Validators.Interfaces;
+using login_api_iw_js.Validators.Reglas;
 using Microsoft.EntityFrameworkCore;
 
 namespace login_api_iw_js.Services.Implementations.Administrador
@@ -32,9 +35,19 @@ namespace login_api_iw_js.Services.Implementations.Administrador
 
         public async Task CrearAsync(HitoCreateDto dto)
         {
-            var existeObjetivo = await _context.Objetivo.AnyAsync(o => o.Id == dto.ObjetivoId);
-            if (!existeObjetivo)
-                throw new Exception("El ObjetivoId no existe.");
+            //var existeObjetivo = await _context.Objetivo.AnyAsync(o => o.Id == dto.ObjetivoId);
+            //if (!existeObjetivo)
+            //    throw new Exception("El ObjetivoId no existe.");
+
+
+            // Aplicación del principio OCP: las validaciones se delegan a clases externas
+            var reglas = new List<IHitoReglaValidacion>
+            {
+                new ValidarObjetivoExistente(_context) // Verifica si el objetivo asociado al hito existe
+                // Se Puede agregar más validaciones aquí sin modificar este método
+            };
+            var validator = new HitoValidator(reglas);
+            validator.ValidarTodo(dto);
 
             var hito = new Hito
             {
