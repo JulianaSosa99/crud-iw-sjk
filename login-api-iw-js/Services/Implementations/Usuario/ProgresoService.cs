@@ -2,6 +2,7 @@
 using login_api_iw_js.DTOs;
 using login_api_iw_js.Models;
 using login_api_iw_js.Services.Interfaces.Usuario;
+using login_api_iw_js.Validators;
 using Microsoft.EntityFrameworkCore;
 
 namespace login_api_iw_js.Services.Implementations.Usuario
@@ -18,12 +19,14 @@ namespace login_api_iw_js.Services.Implementations.Usuario
         public async Task RegistrarProgresoAsync(int usuarioId, ProgresoDto dto)
         {
             var hito = await _context.Hito.FindAsync(dto.HitoId);
-            if (hito == null)
-                throw new Exception("Hito no encontrado.");
+            //if (hito == null)
+            //    throw new Exception("Hito no encontrado.");
 
-            // Verificación opcional: valor no puede ser mayor al máximo definido por el admin
-            if (hito.Calificacion.HasValue && dto.ValorObtenido > hito.Calificacion)
-                throw new Exception("El valor obtenido excede la calificación máxima definida por el administrador.");
+            //// Verificación opcional: valor no puede ser mayor al máximo definido por el admin
+            //if (hito.Calificacion.HasValue && dto.ValorObtenido > hito.Calificacion)
+            //    throw new Exception("El valor obtenido excede la calificación máxima definida por el administrador.");
+            
+            ProgresoValidator.Validar(dto, hito);
 
             var progreso = new Progreso
             {
