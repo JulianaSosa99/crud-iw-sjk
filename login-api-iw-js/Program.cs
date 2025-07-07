@@ -3,6 +3,8 @@ using login_api_iw_js.LoginApi_Mappers;
 using login_api_iw_js.LoginApi_Middleware;
 using login_api_iw_js.LoginApi_Repositories;
 using login_api_iw_js.LoginApi_Services;
+using login_api_iw_js.Repositories.Implementations;
+using login_api_iw_js.Repositories.Interfaces;
 using login_api_iw_js.Services.Implementations.Administrador;
 using login_api_iw_js.Services.Implementations.Usuario;
 using login_api_iw_js.Services.Interfaces.Administrador;
@@ -79,6 +81,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Conexión manual a DB para procedimientos (si se usa)
 builder.Services.AddScoped<IDbConnection>(sp =>
     new SqlConnection(connectionString));
+
+builder.Services.AddScoped<IHitoRepository, HitoRepository>();
 
 // Controladores
 builder.Services.AddControllers();

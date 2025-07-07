@@ -2,6 +2,8 @@
 using login_api_iw_js.Data;
 using login_api_iw_js.DTOs;
 using login_api_iw_js.Models;
+using login_api_iw_js.Repositories.Implementations;
+using login_api_iw_js.Repositories.Interfaces;
 using login_api_iw_js.Services.Interfaces.Administrador;
 using login_api_iw_js.Validators;
 using login_api_iw_js.Validators.Interfaces;
@@ -13,12 +15,14 @@ namespace login_api_iw_js.Services.Implementations.Administrador
     public class HitoService : IHitoService
     {
         private readonly AppDbContext _context;
+        private readonly IHitoRepository _hitoRepository;
         private readonly IMapper _mapper;
 
-        public HitoService(AppDbContext context, IMapper mapper)
+        public HitoService(AppDbContext context, IMapper mapper, IHitoRepository hitoRepository)
         {
             _context = context;
             _mapper = mapper;
+            _hitoRepository = hitoRepository;
         }
 
         public async Task<List<HitoResponseDto>> ObtenerTodosAsync()
@@ -43,7 +47,7 @@ namespace login_api_iw_js.Services.Implementations.Administrador
             // Aplicación del principio OCP: las validaciones se delegan a clases externas
             var reglas = new List<IHitoReglaValidacion>
             {
-                new ValidarObjetivoExistente(_context) // Verifica si el objetivo asociado al hito existe
+                new ValidarObjetivoExistente(_hitoRepository) // Verifica si el objetivo asociado al hito existe
                 // Se Puede agregar más validaciones aquí sin modificar este método
             };
             var validator = new HitoValidator(reglas);

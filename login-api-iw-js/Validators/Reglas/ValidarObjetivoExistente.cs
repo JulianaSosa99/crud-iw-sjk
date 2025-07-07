@@ -1,5 +1,6 @@
 ﻿using login_api_iw_js.Data;
 using login_api_iw_js.DTOs;
+using login_api_iw_js.Repositories.Interfaces;
 using login_api_iw_js.Validators.Interfaces;
 
 namespace login_api_iw_js.Validators.Reglas
@@ -8,19 +9,21 @@ namespace login_api_iw_js.Validators.Reglas
     public class ValidarObjetivoExistente : IHitoReglaValidacion
 
     {
-        private readonly AppDbContext _context;
+        //private readonly AppDbContext _context;
 
-        public ValidarObjetivoExistente(AppDbContext context)
+        private readonly IHitoRepository _repo;
+
+        public ValidarObjetivoExistente(IHitoRepository repo)
         {
-            _context = context;
+            _repo = repo;
         }
 
         public void Validar(HitoCreateDto dto)
         {
-            var existe = _context.Objetivo.Any(o => o.Id == dto.ObjetivoId);
+            var existe = _repo.ObjetivoExisteAsync(dto.ObjetivoId).Result;
             if (!existe)
                 throw new Exception("El ObjetivoId no existe.");
         }
-        
+
     }
 }
