@@ -47,8 +47,9 @@ namespace login_api_iw_js.Services.Implementations.Administrador
             // Aplicación del principio OCP: las validaciones se delegan a clases externas
             var reglas = new List<IHitoReglaValidacion>
             {
-                new ValidarObjetivoExistente(_hitoRepository) // Verifica si el objetivo asociado al hito existe
+                new ValidarObjetivoExistente(_hitoRepository), // Verifica si el objetivo asociado al hito existe
                 // Se Puede agregar más validaciones aquí sin modificar este método
+                new ValidarSubtemasMinimos()
             };
             var validator = new HitoValidator(reglas);
             validator.ValidarTodo(dto);
